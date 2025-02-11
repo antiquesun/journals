@@ -1,12 +1,11 @@
 <?php
 /*
- * Created on June, 2009
+ * Originally created on June, 2009
  *
  * Author: Kent W Blodgett
- * Project: The Carnival redesign
+ * Project: Journals 
  *  
- * This is to begin our web store process to design and implement
- * the necessary components and architecture.  This index page 
+ * This index page 
  * is where all the logic flows from initially.  An include process 
  * will bring in the appropriate global and page specific files for
  * each load.
