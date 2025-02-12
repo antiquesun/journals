@@ -1,0 +1,61 @@
+
+
+CREATE TRIGGER blogd_before_insert BEFORE INSERT
+ON Blogs
+FOR EACH ROW SET NEW.created = NOW(), NEW.updated = NOW() ;
+
+
+CREATE TRIGGER blogs_before_update BEFORE UPDATE
+ON Blogs
+FOR EACH ROW SET  NEW.updated = NOW() ;
+
+
+
+CREATE TRIGGER comment_before_insert BEFORE INSERT
+ON Comments
+FOR EACH ROW SET NEW.created = NOW(), NEW.updated = NOW() ;
+
+
+CREATE TRIGGER comment_before_update BEFORE UPDATE
+ON Comments
+FOR EACH ROW SET  NEW.updated = NOW() ;
+
+
+CREATE TRIGGER account_before_insert BEFORE INSERT
+ON UserAccount
+FOR EACH ROW SET NEW.created = NOW(), NEW.updated = NOW() ;
+
+
+CREATE TRIGGER account_before_update BEFORE UPDATE
+ON UserAccount
+FOR EACH ROW SET  NEW.updated = NOW() ;
+
+
+CREATE TRIGGER gallery_before_insert BEFORE INSERT
+ON Galleries
+FOR EACH ROW SET NEW.created = NOW(), NEW.updated = NOW() ;
+
+
+CREATE TRIGGER gallery_before_update BEFORE UPDATE
+ON Galleries
+FOR EACH ROW SET  NEW.updated = NOW() ;
+
+
+CREATE TRIGGER gallery_image_before_insert BEFORE INSERT
+ON GalleryImage
+FOR EACH ROW SET NEW.created = NOW(), NEW.updated = NOW() ;
+
+
+CREATE TRIGGER gallery_image_before_update BEFORE UPDATE
+ON GalleryImage
+FOR EACH ROW SET  NEW.updated = NOW() ;
+
+
+CREATE TRIGGER video_create BEFORE INSERT
+ON Videos
+FOR EACH ROW SET  NEW.created = NOW(), NEW.updated = NOW()  ;
+
+
+CREATE TRIGGER video_update BEFORE UPDATE
+ON Videos
+FOR EACH ROW SET  NEW.updated = NOW() ;
