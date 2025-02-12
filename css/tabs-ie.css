@@ -1,0 +1,11 @@
+.tabs, .dTabs { /* auto clear */
+    display: inline-block; /* @ IE 7 */
+    _height: 1%; /* @ IE 6 */
+}
+.tabs a, dTabs a {
+    float: left;
+}
+.tabs .tabs-disabled a, .dTabs .tabs-disabled a {
+    filter: alpha(opacity=40);
+    zoom: 1; /* trigger filter */
+}

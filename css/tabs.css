@@ -1,0 +1,246 @@
+/*
+----------------------------------------------------------------------------------------------
+LeapFrog Flypen Tab Styles
+Version:  1.5
+Last Modified: 1.18.07 by SM
+
+Contains: Definitions for controlling tabs and tab content on the product detail page
+---------------------------------------------------------------------------------------------- */
+
+
+/* IMPORTANT: Essential styles to ensure accessibility */
+@media projection, screen { /* use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+    .tabs-hide {
+        display: none;
+    }
+}
+@media print { /* maintain accessibility by overriding inline style used by animations... */
+    .fragment {
+        display: block !important;
+        height: auto !important;
+        opacity: 1 !important;
+    }
+    .tabs, .tabs_dialog {
+        display: none;
+    }
+}
+
+/* TAB STYLES: Some more styles, not important for making tabs work, just for the look of it... */
+.has_tabs { /* add to the td that contains the tabs 
+	background: url("/media/img/store_tabs/bg_tabs_full_page_2.png") 0 300px  repeat-x;*/
+	
+	border:0px solid red;
+}
+#product_container {
+	
+	padding:40px 20px 0px 20px;
+	margin-left:20px;
+	/*background:  white url(/media/img/store_global/shadow-rigth-mid-corn.png) repeat-y top right;*/
+	/*border:1px solid red;*/
+	}
+.tab_container {
+	/*background: url("/media/img/store_tabs/bg_tabs.jpg") #05436c 0 20px repeat-x;*/
+	clear: both;
+	float: left;
+    margin: 0;
+    padding: 0;
+	vertical-align: top;
+	border:0px solid red;
+}
+
+.wide div.tab_content { /* add to .tab_container when there's no sidebar/righ column content */
+	margin:0;	
+	background: transparent url(/media/img/store_global/bg_sub_form_gradient.png) repeat-x 0px 0px ;
+	padding:0 20px;
+}
+
+.tabs_container_with_column {
+	clear:both;
+	float: left;
+	width: 100%;
+	border:0px solid red;
+}
+
+.tabs {
+	background-color: transparent;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 8px;	
+    position: relative;
+
+}
+
+.tabs:after, .dTabs:after { /* clearing without presentational markup, IE gets extra treatment */
+    clear: both;
+    content: " ";
+    display: block;
+}
+
+.tabs li {
+	display: block;
+	height: 20px;
+    float: left;
+    margin: 0 3px 0 0;
+    padding: 0;
+	width: 97px;
+}
+
+li.features a {
+	background: url("/media/img/store_tabs/features.png") 0 0 no-repeat;
+}
+
+li.reviews a {
+	background: url("/media/img/store_tabs/reviews.png") 0 0 no-repeat;
+}
+
+li.instructions a {
+	background: url("/media/img/store_tabs/instructions.png") 0 0 no-repeat;
+}
+
+li.demo a {
+	background: url("/media/img/store_tabs/demo.png") 0 0 no-repeat;
+}
+
+.tabs a {
+    display: block;
+	height: 20px;
+	margin: 0;
+    padding: 0;
+    position: relative;
+	width: 97px;
+}
+
+.tabs li a:hover {
+	background-position: 0 -20px;
+}
+
+.tabs .tabs-selected a {
+	background-position: 0 -20px;
+}
+
+/* tab container content styles */
+.tab_content {
+	color:#004080;
+	font-size: 12px;
+	height: 250px;
+	margin: 0 163px 0 0;
+    padding: 0;
+}
+
+.tab_content ul {
+	margin: 15px 0 0 0;
+	padding: 0;
+}
+
+.tab_content li {
+	margin-left:15px;
+}
+
+.tab_content p {
+	font-size: 12px;
+	margin: 0;
+	padding: 15px 0 0 0;
+}
+
+#reviews_tab p { /* set right padding on reviews tabs to accommodate the inset box */
+	padding-right: 150px;
+}
+
+#reviews_tab .inset p { /* reset the right padding on the inset box */
+	padding-right: 0;
+}
+
+.tab_content p.your_review_note, .tab_content p.title, .tab_content p.number_of_reviews, .tab_content p.your_review, .tab_content p.review_title, .tab_content p.yours {
+	color:#0066CC;
+}
+
+.tab_content p.your_review_note {
+	font-style: italic;
+	font-weight: normal;
+	padding: 0;
+	
+}
+
+.tab_content p.review_title {
+	font-weight: bold;
+}
+
+.tab_content p.yours {
+	font-weight: normal;
+}
+
+.tab_content p.title {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 15px 0 0 0;
+	padding: 0;
+}
+
+.tab_content p.after_title, .tab_content p.yours {
+	padding-top: 0;
+}
+
+.tab_content p.number_of_reviews {
+	padding-bottom: 15px;
+}
+
+.tab_content p.your_review {
+	font-style: italic;
+	font-weight: bold;
+	padding: 0;
+}
+
+.tab_content a, .tab_content a:visited {
+	color:#0099CC;
+}
+
+.tab_content a:hover {
+	color:#FF6600;
+}
+
+/* tab content inset */
+.inset {
+	background: url("/media/img/store_tabs/inset_curve_top.png") 0 0 no-repeat;
+	float: right;
+	margin: 25px 0 0 25px;
+	width: 139px;
+}
+
+.inset p {
+	font-size: 10px;
+	margin: 0 10px 0 8px;
+	padding: 0;
+}
+
+.inset p.title {
+	font-weight: bold;
+	margin: 0 10px 0 8px;
+	padding-top: 5px;
+}
+
+.inset img {
+	margin: 10px 8px;
+}
+
+.inset a.review_it img {
+	float: right;
+	margin: 10px 8px 5px 8px;
+	padding: 0;
+}
+
+.inset img.icon {
+	margin: 0 0 0 3px;
+}
+
+.inset .bg {
+	background: url("/media/img/store_tabs/bg_inset.png") #0075ab 0 0 repeat-y;
+	float: left;
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+
+div.curves img {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
